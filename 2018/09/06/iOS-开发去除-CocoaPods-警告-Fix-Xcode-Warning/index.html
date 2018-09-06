@@ -63,10 +63,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="测试tag," />
+  <meta name="keywords" content="Xcode,CocoaPods,iOS," />
 
 
 
@@ -86,18 +86,25 @@
 
 
 
-<meta name="description" content="哈哈哈哈">
-<meta name="keywords" content="测试tag">
+<meta name="description" content="前言在iOS开发中，通常我们会使用很多第三方代码(轮子),而一般我们会选择使用CocoaPods来管理这个库。然后有些库作者已经停止更新或者更新并没有那么即使，当SDK升级或者编译器升级以后，这些遗留代码会出现很多警告。每次便宜项目看到这个多警告实在是很不爽。   关闭CocoaPods中的警告在Podfile中加入 inhibit_all_warnings!即可 12platform :ios,">
+<meta name="keywords" content="Xcode,CocoaPods,iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇测试文章">
-<meta property="og:url" content="http://yoursite.com/2018/08/28/第一篇测试文章/index.html">
+<meta property="og:title" content="iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/iOS-开发去除-CocoaPods-警告-Fix-Xcode-Warning/index.html">
 <meta property="og:site_name" content="RedMaple">
-<meta property="og:description" content="哈哈哈哈">
+<meta property="og:description" content="前言在iOS开发中，通常我们会使用很多第三方代码(轮子),而一般我们会选择使用CocoaPods来管理这个库。然后有些库作者已经停止更新或者更新并没有那么即使，当SDK升级或者编译器升级以后，这些遗留代码会出现很多警告。每次便宜项目看到这个多警告实在是很不爽。   关闭CocoaPods中的警告在Podfile中加入 inhibit_all_warnings!即可 12platform :ios,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-29T06:45:25.425Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3wmptj212e080ab4.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3zb6ij212i0heq6e.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzykcuskij212a0eujug.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzz5b07adj212f07c75e.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzzi9e7khj212h04bgm9.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fv00o43f67j2144071ad0.jpg">
+<meta property="og:updated_time" content="2018-09-06T11:34:49.338Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇测试文章">
-<meta name="twitter:description" content="哈哈哈哈">
+<meta name="twitter:title" content="iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)">
+<meta name="twitter:description" content="前言在iOS开发中，通常我们会使用很多第三方代码(轮子),而一般我们会选择使用CocoaPods来管理这个库。然后有些库作者已经停止更新或者更新并没有那么即使，当SDK升级或者编译器升级以后，这些遗留代码会出现很多警告。每次便宜项目看到这个多警告实在是很不爽。   关闭CocoaPods中的警告在Podfile中加入 inhibit_all_warnings!即可 12platform :ios,">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3wmptj212e080ab4.jpg">
 
 
 
@@ -127,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/28/第一篇测试文章/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/06/iOS-开发去除-CocoaPods-警告-Fix-Xcode-Warning/"/>
 
 
 
 
 
-  <title>第一篇测试文章 | RedMaple</title>
+  <title>iOS 开发去除 CocoaPods 警告(Fix Xcode Warning) | RedMaple</title>
   
 
 
@@ -271,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/28/第一篇测试文章/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/iOS-开发去除-CocoaPods-警告-Fix-Xcode-Warning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="RedMaple">
@@ -288,7 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一篇测试文章</h1>
+          <h1 class="post-title" itemprop="name headline">iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)</h1>
         
 
         <div class="post-meta">
@@ -300,8 +307,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-28T17:42:41+08:00">
-                2018-08-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T13:52:11+08:00">
+                2018-09-06
               </time>
             
 
@@ -323,8 +330,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/测试分类/" itemprop="url" rel="index">
-                    <span itemprop="name">测试分类</span>
+                  <a href="/categories/iOS-开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS 开发</span>
                   </a>
                 </span>
 
@@ -360,7 +367,30 @@
       
 
       
-        <h3 id="哈哈哈哈"><a href="#哈哈哈哈" class="headerlink" title="哈哈哈哈"></a>哈哈哈哈</h3>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在iOS开发中，通常我们会使用很多第三方代码(轮子),而一般我们会选择使用CocoaPods来管理这个库。然后有些库作者已经停止更新或者更新并没有那么即使，当SDK升级或者编译器升级以后，这些遗留代码会出现很多警告。每次便宜项目看到这个多警告实在是很不爽。  </p>
+<h3 id="关闭CocoaPods中的警告"><a href="#关闭CocoaPods中的警告" class="headerlink" title="关闭CocoaPods中的警告"></a>关闭CocoaPods中的警告</h3><p>在Podfile中加入 <code>inhibit_all_warnings!</code>即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">platform :ios, &apos;9.0&apos;</span><br><span class="line">inhibit_all_warnings!</span><br></pre></td></tr></table></figure>
+<h4 id="关闭文档警告"><a href="#关闭文档警告" class="headerlink" title="关闭文档警告"></a>关闭文档警告</h4><p><code>pod install</code> 后发现警告少了，但是还是有一些警告。  如下图</p>
+<p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3wmptj212e080ab4.jpg" alt=""></p>
+<p>因为从 Xcode8.0 开始，引入了文档注释的警告 。<br>解决方法关掉Pods的文档警告<br><code>Pods</code> -&gt; <code>Build Settings</code> -&gt; <code>Documentation Comments</code> -&gt; <code>NO</code></p>
+<p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3zb6ij212i0heq6e.jpg" alt=""></p>
+<h4 id="关闭单个库警告"><a href="#关闭单个库警告" class="headerlink" title="关闭单个库警告"></a>关闭单个库警告</h4><p><code>command + B</code> 编译一下，文档警告没有了，美滋滋。<br>然后发现不对，怎么pods中还有警告<br><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzykcuskij212a0eujug.jpg" alt=""></p>
+<p>这个应该算是 Xcode9 的“新特性”吧，从 Xcode9 开始我们定义一个不带参数的block<br>如<code>typedef void(^TestBlock)();</code><br>会显示警告<code>This block declaration is not a prototype</code><br>直接点击Fix <code>typedef void(^TestBlock)(void);</code> 即可<br>Or<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#pragma clang diagnostic push</span><br><span class="line">#pragma clang diagnostic ignored &quot;-Wstrict-prototypes&quot;</span><br><span class="line">typedef void(^TestBlock)();</span><br><span class="line">#pragma clang diagnostic pop</span><br></pre></td></tr></table></figure></p>
+<p>来忽略警告</p>
+<p>对于自己的项目代码，肯定是每个 warning 都 fix 掉，按照官方推荐写法来 coding ，然后对于第三方库来说，要改动的地方太多了，这种方法不太合适。<br>下面介绍一种一劳永逸的方法。<br><code>Pods</code> -&gt; <code>target</code> -&gt; <code>Other Warning Flags</code> 添加 <code>-w</code></p>
+<p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzz5b07adj212f07c75e.jpg" alt=""></p>
+<p><font color="#FF1493">注意：</font>是小写w，如果是大写的W则是显示所有警告。</p>
+<p>同样可以直接修改 Pods 整个 Project 的 <code>Other Warning Flags</code> 关闭所有第三方库的警告。</p>
+<h4 id="关闭单个文件警告"><a href="#关闭单个文件警告" class="headerlink" title="关闭单个文件警告"></a>关闭单个文件警告</h4><p>此方法同样适用于项目中关闭单个文件的 warning<br><code>target</code> -&gt; <code>Build Phases</code> -&gt; <code>Compile Source</code> 找到相关文件，在后面加入<code>-w</code></p>
+<h4 id="关闭整个工程的相关警告"><a href="#关闭整个工程的相关警告" class="headerlink" title="关闭整个工程的相关警告"></a>关闭整个工程的相关警告</h4><p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzzi9e7khj212h04bgm9.jpg" alt=""></p>
+<p>不过并不推荐直接关闭文件或者整个项目的 warning ，warning有助于定位问题，能改掉的 warning 还是尽量修改。</p>
+<h4 id="关闭局部警告方法"><a href="#关闭局部警告方法" class="headerlink" title="关闭局部警告方法"></a>关闭局部警告方法</h4><p>上面有提到使用<code>#pragma clang diagnostic ignored &quot;警告名称&quot;</code> 来消除警告<br><code>#pragma</code> 本质上是声明，我们通常用来注释。而他的另一个强大功能就是处理编译器警告<br><code>clang diagnostic</code> 就是 <code>#pragma</code>的一个常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#pragma clang diagnostic push</span><br><span class="line">#pragma clang diagnostic ignored &quot;-warning name&quot;</span><br><span class="line">// your code</span><br><span class="line">#pragma clang diagnostic pop</span><br></pre></td></tr></table></figure>
+<p>那么我们怎么找到这个 <code>warning name</code> 呢？<br>选中广告右击显示菜单，选则 <code>Reveal in Log</code></p>
+<p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fv00o43f67j2144071ad0.jpg" alt=""></p>
+<p>如图，中括号中的 <code>-Wstrict-prototypes</code> 就是 warning name </p>
+<h4 id="常用的警告名称"><a href="#常用的警告名称" class="headerlink" title="常用的警告名称"></a>常用的警告名称</h4><p><code>#pragma clang diagnostic ignored &quot;-Wunused-variable&quot;</code> 未使用的变量<br><code>#pragma clang diagnostic ignored &quot;-Warc-retain-cycles&quot;</code> retain cycle<br><code>#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</code> 方法弃用警告<br><code>#pragma clang diagnostic ignored &quot;-Wincompatible-pointer-types&quot;</code> 不兼容的指针类型</p>
+
       
     </div>
     
@@ -377,7 +407,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/测试tag/" rel="tag"># 测试tag</a>
+            <a href="/tags/Xcode/" rel="tag"># Xcode</a>
+          
+            <a href="/tags/CocoaPods/" rel="tag"># CocoaPods</a>
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
           
         </div>
       
@@ -386,22 +420,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/08/28/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -484,7 +502,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -506,7 +524,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -567,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#哈哈哈哈"><span class="nav-number">1.</span> <span class="nav-text">哈哈哈哈</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭CocoaPods中的警告"><span class="nav-number">2.</span> <span class="nav-text">关闭CocoaPods中的警告</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭文档警告"><span class="nav-number">2.1.</span> <span class="nav-text">关闭文档警告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭单个库警告"><span class="nav-number">2.2.</span> <span class="nav-text">关闭单个库警告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭单个文件警告"><span class="nav-number">2.3.</span> <span class="nav-text">关闭单个文件警告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭整个工程的相关警告"><span class="nav-number">2.4.</span> <span class="nav-text">关闭整个工程的相关警告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭局部警告方法"><span class="nav-number">2.5.</span> <span class="nav-text">关闭局部警告方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的警告名称"><span class="nav-number">2.6.</span> <span class="nav-text">常用的警告名称</span></a></li></ol></li></ol></div>
             
 
           </div>
