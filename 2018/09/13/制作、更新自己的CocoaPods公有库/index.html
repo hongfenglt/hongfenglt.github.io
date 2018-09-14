@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="CocoaPods,iOS,Xcode," />
+  <meta name="keywords" content="CocoaPods,iOS," />
 
 
 
@@ -86,25 +86,30 @@
 
 
 
-<meta name="description" content="前言在iOS开发中，通常我们会使用很多第三方代码(轮子),而一般我们会选择使用CocoaPods来管理这个库。然后有些库作者已经停止更新或者更新并没有那么即使，当SDK升级或者编译器升级以后，这些遗留代码会出现很多警告。每次便宜项目看到这个多警告实在是很不爽。   关闭CocoaPods中的警告在Podfile中加入 inhibit_all_warnings!即可 12platform :ios,">
-<meta name="keywords" content="CocoaPods,iOS,Xcode">
+<meta name="description" content="前言CocoaPods 是为iOS/Mac开发而生的依赖管理工具。开发 iOS 项目不可避免的要使用各种第三方开源库，而 CocoaPods 可以让我们很方便的管理第三方库，极大的提高我们的工作效率。我们从事 iOS 开发一段时间后，肯定会整理一些自己常用的分类、封装一些 UI 组件、工具等等。这篇文章会带你从零开始创建属于你自己的 CocoaPods 库。当然库本身的代码内容需要你自己去创造。关">
+<meta name="keywords" content="CocoaPods,iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)">
-<meta property="og:url" content="http://yoursite.com/2018/09/06/iOS-开发去除-CocoaPods-警告-Fix-Xcode-Warning/index.html">
+<meta property="og:title" content="制作、更新自己的CocoaPods公有库">
+<meta property="og:url" content="http://yoursite.com/2018/09/13/制作、更新自己的CocoaPods公有库/index.html">
 <meta property="og:site_name" content="redmaple">
-<meta property="og:description" content="前言在iOS开发中，通常我们会使用很多第三方代码(轮子),而一般我们会选择使用CocoaPods来管理这个库。然后有些库作者已经停止更新或者更新并没有那么即使，当SDK升级或者编译器升级以后，这些遗留代码会出现很多警告。每次便宜项目看到这个多警告实在是很不爽。   关闭CocoaPods中的警告在Podfile中加入 inhibit_all_warnings!即可 12platform :ios,">
+<meta property="og:description" content="前言CocoaPods 是为iOS/Mac开发而生的依赖管理工具。开发 iOS 项目不可避免的要使用各种第三方开源库，而 CocoaPods 可以让我们很方便的管理第三方库，极大的提高我们的工作效率。我们从事 iOS 开发一段时间后，肯定会整理一些自己常用的分类、封装一些 UI 组件、工具等等。这篇文章会带你从零开始创建属于你自己的 CocoaPods 库。当然库本身的代码内容需要你自己去创造。关">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3zb6ij212i0heq6e.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3wmptj212e080ab4.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzykcuskij212a0eujug.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzz5b07adj212f07c75e.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzzi9e7khj212h04bgm9.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fv00o43f67j2144071ad0.jpg">
-<meta property="og:updated_time" content="2018-09-07T01:57:01.330Z">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwgy1fv8wb7ia9zj30sg0lcafv.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwgy1fv913yms8zj30ov0hx40t.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwgy1fv91cgwh9hj30zc09odx6.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwgy1fv92z2mu3rj30iy04r74q.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv97331gh2j30ry0osq91.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv942dtijhj31910h0qv5.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95b6m9scj30c2021dgv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95ne6869j30v409ck57.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95wbws43j30fc061q72.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwgy1fv964wptu9j30no0kw4id.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwgy1fv96yvzcbij30qb0eiaui.jpg">
+<meta property="og:updated_time" content="2018-09-14T09:32:54.754Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)">
-<meta name="twitter:description" content="前言在iOS开发中，通常我们会使用很多第三方代码(轮子),而一般我们会选择使用CocoaPods来管理这个库。然后有些库作者已经停止更新或者更新并没有那么即使，当SDK升级或者编译器升级以后，这些遗留代码会出现很多警告。每次便宜项目看到这个多警告实在是很不爽。   关闭CocoaPods中的警告在Podfile中加入 inhibit_all_warnings!即可 12platform :ios,">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3zb6ij212i0heq6e.jpg">
+<meta name="twitter:title" content="制作、更新自己的CocoaPods公有库">
+<meta name="twitter:description" content="前言CocoaPods 是为iOS/Mac开发而生的依赖管理工具。开发 iOS 项目不可避免的要使用各种第三方开源库，而 CocoaPods 可以让我们很方便的管理第三方库，极大的提高我们的工作效率。我们从事 iOS 开发一段时间后，肯定会整理一些自己常用的分类、封装一些 UI 组件、工具等等。这篇文章会带你从零开始创建属于你自己的 CocoaPods 库。当然库本身的代码内容需要你自己去创造。关">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tNbRwgy1fv8wb7ia9zj30sg0lcafv.jpg">
 
 
 
@@ -134,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/06/iOS-开发去除-CocoaPods-警告-Fix-Xcode-Warning/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/13/制作、更新自己的CocoaPods公有库/"/>
 
 
 
 
 
-  <title>iOS 开发去除 CocoaPods 警告(Fix Xcode Warning) | redmaple</title>
+  <title>制作、更新自己的CocoaPods公有库 | redmaple</title>
   
 
 
@@ -278,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/iOS-开发去除-CocoaPods-警告-Fix-Xcode-Warning/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/制作、更新自己的CocoaPods公有库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="勤奋的笨老头">
@@ -295,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)</h1>
+          <h1 class="post-title" itemprop="name headline">制作、更新自己的CocoaPods公有库</h1>
         
 
         <div class="post-meta">
@@ -307,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T13:52:11+08:00">
-                2018-09-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T20:06:17+08:00">
+                2018-09-13
               </time>
             
 
@@ -330,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS-开发/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS 开发</span>
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
                   </a>
                 </span>
 
@@ -367,29 +372,42 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在iOS开发中，通常我们会使用很多第三方代码(轮子),而一般我们会选择使用CocoaPods来管理这个库。然后有些库作者已经停止更新或者更新并没有那么即使，当SDK升级或者编译器升级以后，这些遗留代码会出现很多警告。每次便宜项目看到这个多警告实在是很不爽。  </p>
-<h3 id="关闭CocoaPods中的警告"><a href="#关闭CocoaPods中的警告" class="headerlink" title="关闭CocoaPods中的警告"></a>关闭CocoaPods中的警告</h3><p>在Podfile中加入 <code>inhibit_all_warnings!</code>即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">platform :ios, &apos;9.0&apos;</span><br><span class="line">inhibit_all_warnings!</span><br></pre></td></tr></table></figure>
-<h4 id="关闭文档警告"><a href="#关闭文档警告" class="headerlink" title="关闭文档警告"></a>关闭文档警告</h4><p><code>pod install</code> 后发现警告少了，但是还是有一些警告。  如下图</p>
-<p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3zb6ij212i0heq6e.jpg" alt=""></p>
-<p>因为从 Xcode8.0 开始，引入了文档注释的警告 。<br>解决方法关掉Pods的文档警告<br><code>Pods</code> -&gt; <code>Build Settings</code> -&gt; <code>Documentation Comments</code> -&gt; <code>NO</code></p>
-<p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzvz3wmptj212e080ab4.jpg" alt=""></p>
-<h4 id="关闭单个库警告"><a href="#关闭单个库警告" class="headerlink" title="关闭单个库警告"></a>关闭单个库警告</h4><p><code>command + B</code> 编译一下，文档警告没有了，美滋滋。<br>然后发现不对，怎么pods中还有警告<br><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzykcuskij212a0eujug.jpg" alt=""></p>
-<p>这个应该算是 Xcode9 的“新特性”吧，从 Xcode9 开始我们定义一个不带参数的block<br>如<code>typedef void(^TestBlock)();</code><br>会显示警告<code>This block declaration is not a prototype</code><br>直接点击Fix <code>typedef void(^TestBlock)(void);</code> 即可<br>Or<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#pragma clang diagnostic push</span><br><span class="line">#pragma clang diagnostic ignored &quot;-Wstrict-prototypes&quot;</span><br><span class="line">typedef void(^TestBlock)();</span><br><span class="line">#pragma clang diagnostic pop</span><br></pre></td></tr></table></figure></p>
-<p>来忽略警告</p>
-<p>对于自己的项目代码，肯定是每个 warning 都 fix 掉，按照官方推荐写法来 coding ，然后对于第三方库来说，要改动的地方太多了，这种方法不太合适。<br>下面介绍一种一劳永逸的方法。<br><code>Pods</code> -&gt; <code>target</code> -&gt; <code>Other Warning Flags</code> 添加 <code>-w</code></p>
-<p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzz5b07adj212f07c75e.jpg" alt=""></p>
-<p><font color="#FF1493">注意：</font>是小写w，如果是大写的W则是显示所有警告。</p>
-<p>同样可以直接修改 Pods 整个 Project 的 <code>Other Warning Flags</code> 关闭所有第三方库的警告。</p>
-<h4 id="关闭单个文件警告"><a href="#关闭单个文件警告" class="headerlink" title="关闭单个文件警告"></a>关闭单个文件警告</h4><p>此方法同样适用于项目中关闭单个文件的 warning<br><code>target</code> -&gt; <code>Build Phases</code> -&gt; <code>Compile Source</code> 找到相关文件，在后面加入<code>-w</code></p>
-<h4 id="关闭整个工程的相关警告"><a href="#关闭整个工程的相关警告" class="headerlink" title="关闭整个工程的相关警告"></a>关闭整个工程的相关警告</h4><p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fuzzi9e7khj212h04bgm9.jpg" alt=""></p>
-<p>不过并不推荐直接关闭文件或者整个项目的 warning ，warning有助于定位问题，能改掉的 warning 还是尽量修改。</p>
-<h4 id="关闭局部警告方法"><a href="#关闭局部警告方法" class="headerlink" title="关闭局部警告方法"></a>关闭局部警告方法</h4><p>上面有提到使用<code>#pragma clang diagnostic ignored &quot;警告名称&quot;</code> 来消除警告<br><code>#pragma</code> 本质上是声明，我们通常用来注释。而他的另一个强大功能就是处理编译器警告<br><code>clang diagnostic</code> 就是 <code>#pragma</code>的一个常用命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#pragma clang diagnostic push</span><br><span class="line">#pragma clang diagnostic ignored &quot;-warning name&quot;</span><br><span class="line">// your code</span><br><span class="line">#pragma clang diagnostic pop</span><br></pre></td></tr></table></figure>
-<p>那么我们怎么找到这个 <code>warning name</code> 呢？<br>选中广告右击显示菜单，选则 <code>Reveal in Log</code></p>
-<p><img src="https://ws1.sinaimg.cn/large/6bbdc4d0gy1fv00o43f67j2144071ad0.jpg" alt=""></p>
-<p>如图，中括号中的 <code>-Wstrict-prototypes</code> 就是 warning name </p>
-<h4 id="常用的警告名称"><a href="#常用的警告名称" class="headerlink" title="常用的警告名称"></a>常用的警告名称</h4><p><code>#pragma clang diagnostic ignored &quot;-Wunused-variable&quot;</code> 未使用的变量<br><code>#pragma clang diagnostic ignored &quot;-Warc-retain-cycles&quot;</code> retain cycle<br><code>#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</code> 方法弃用警告<br><code>#pragma clang diagnostic ignored &quot;-Wincompatible-pointer-types&quot;</code> 不兼容的指针类型</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><a href="https://cocoapods.org/" target="_blank" rel="noopener">CocoaPods</a> 是为iOS/Mac开发而生的依赖管理工具。<br>开发 iOS 项目不可避免的要使用各种第三方开源库，而 CocoaPods 可以让我们很方便的管理第三方库，极大的提高我们的工作效率。<br>我们从事 iOS 开发一段时间后，肯定会整理一些自己常用的分类、封装一些 UI 组件、工具等等。这篇文章会带你从零开始创建属于你自己的 CocoaPods 库。当然库本身的代码内容需要你自己去创造。<br>关于 CocoaPods 具体的安装使用这里不再多说。</p>
+<h3 id="CocoaPods原理图"><a href="#CocoaPods原理图" class="headerlink" title="CocoaPods原理图"></a>CocoaPods原理图</h3><p>我下面画了一张简单的图方便理解 CocoaPods 工作原理。<br><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fv8wb7ia9zj30sg0lcafv.jpg" alt=""></p>
+<p>如果理解了图上 CocoaPods 的流程，那么 CocoaPods 的制作流程就很明显了。  </p>
+<a id="more"></a>
+<ol>
+<li>开发源码并上传到 Github 等代码托管平台</li>
+<li>创建.spec文件并补全信息</li>
+<li>上传.spec文件到远程索引库  </li>
+</ol>
+<h3 id="CocoaPods-制作教程"><a href="#CocoaPods-制作教程" class="headerlink" title="CocoaPods 制作教程"></a>CocoaPods 制作教程</h3><p>下面我以托管到 Github 为例，制作一个测试的 CocoaPods 库  </p>
+<h4 id="1-开发源码并上传到-Github-等代码托管平台"><a href="#1-开发源码并上传到-Github-等代码托管平台" class="headerlink" title="1. 开发源码并上传到 Github 等代码托管平台"></a>1. 开发源码并上传到 Github 等代码托管平台</h4><p>1.1  在 Github 上创建一个新的仓库， README可选也可以不选，也可以以后再创建，<code>.gitgore</code> 选择对应语言<code>，Objective-C</code> 或者 <code>Swift</code> ，<code>License</code>随意算择。<br><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fv913yms8zj30ov0hx40t.jpg" alt=""></p>
+<p>1.2  Clone项目到本地工作区<br><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fv91cgwh9hj30zc09odx6.jpg" alt=""></p>
+<p>把你的代码加进去<br><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fv92z2mu3rj30iy04r74q.jpg" alt=""><br>这里 Classes 可以改成你的框架名字</p>
+<p>1.3  提交代码到 Github 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add.</span><br><span class="line">git commit -m &quot;init commit&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-创建-spec文件并补全信息"><a href="#2-创建-spec文件并补全信息" class="headerlink" title="2 创建.spec文件并补全信息"></a>2 创建.spec文件并补全信息</h4><p>2.1  创建.spec 文件  <code>pod spec create LTTestLib</code>  </p>
+<p>2.2  编辑.spec 文件<br><a href="https://github.com/hongfenglt/LTTestLib/blob/master/LTTestLib.podspec" target="_blank" rel="noopener">这个测试项目的spec</a><br>里面注释写的很清楚了<br><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv97331gh2j30ry0osq91.jpg" alt=""></p>
+<p>2.3 打Tag标签<br>这个标签要跟.spec中的一致，因为最后 CocoaPods 会根据 .spec 文件中的 tag 去下载源码<br>例如 <code>pod &#39;AFNetworking&#39;, &#39;~&gt; 3.0&#39;</code><br>如果不指定版本默认会安装最新版</p>
+<p>git tag 0.0.1<br>git push –tags </p>
+<p>远程仓库 <a href="https://github.com/hongfenglt/LTTestLib/releases" target="_blank" rel="noopener">Releases</a> 中就有了刚刚 push 上去的 tag ，如果打错 tag ，下面是删除 tag 的方法</p>
+<p>git tag -d 0.0.1 // 删除本地 tag<br>git push origin :0.0.1 // 删除远程 tag</p>
+<h4 id="3-上传-spec文件到远程索引库"><a href="#3-上传-spec文件到远程索引库" class="headerlink" title="3.上传.spec文件到远程索引库"></a>3.上传.spec文件到远程索引库</h4><p>3.1 注册 Trunk<br><code>pod trunk register hongfengkt@gmail.com --verbose</code><br>注意上面邮箱换成你的真实邮箱，成功后你会收到一封邮件，需要点击验证<br>查看trunk  <code>pod trunk me</code><br>添加其他维护者(如果框架由多人维护)<br><code>pod trunk add-owner ARAnalytics kyle@cocoapods.org</code><br>更多详细内容查看官网：<a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html" target="_blank" rel="noopener">https://guides.cocoapods.org/making/getting-setup-with-trunk.html</a>  </p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv942dtijhj31910h0qv5.jpg" alt=""><br>以上只需操作一次</p>
+<p>3.2 验证.spec文件<br>本地验证.spec： <code>pod spec lint</code><br>如果没有问题会显示 <code>LTTestLib.podspec passed validation.</code><br><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95b6m9scj30c2021dgv.jpg" alt=""><br>如果有问题使用 <code>pod spec lint --verbose</code> 可以查看详细信息</p>
+<p>通过以后提交到远程仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add.  </span><br><span class="line">git commit -m &quot;update spec&quot;  </span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p>3.3 上传 sepc 到官方索引库<br>使用命令  <code>pod trunk push LTTestLib.podspec</code> </p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95ne6869j30v409ck57.jpg" alt=""></p>
+<p>这条命令做了三件事：<br>验证远程 podspec 文件<br>上传 podspec 文件到 trunk 服务<br>将{project}.podspec文件转为{poject}.podspec.json文件</p>
+<p><strong>如果你的库依赖了其他库你可能需要加上</strong> <code>--use-libraries</code><br><strong>如果你依赖的其他库有许多警告，可能会验证不通过，你需要加上</strong> <code>--allow-warnings</code><br><strong>所以最后命令可能是</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pod spec lint LTTestLib.podspec --use-libraries --allow-warnings</span><br><span class="line">pod trunk push LTTestLib.podspec --use-libraries --allow-warnings</span><br></pre></td></tr></table></figure></p>
+<p>3.4 <code>pod search LTTestLib</code> 确认你的库可以被搜索到</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95wbws43j30fc061q72.jpg" alt="">  </p>
+<p>如果这里搜索不到，是因为你本地是索引文件没有更新，参考最上面那张图。<br>删除 search_index.josn 在搜索就可以了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm ~/Library/Caches/CocoaPods/search_index.json</span><br><span class="line">pod search LTTestLib</span><br></pre></td></tr></table></figure></p>
+<p>大功告成，这里能搜到就说明其他人也可以使用 pod 来安装你的库了。</p>
+<p>你可以新建一个项目来测试一下，我们在 spec 文件中设置依赖 Reachability ，所以 Reachability 也会被安装<br><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fv964wptu9j30no0kw4id.jpg" alt=""></p>
+<h4 id="4-更新版本"><a href="#4-更新版本" class="headerlink" title="4.更新版本"></a>4.更新版本</h4><p>更新你的框架，打新 tag<br>编辑 podspec 文件，更新 tag<br>重复3.2~3.4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;0.0.3&quot;</span><br><span class="line">git push</span><br><span class="line">git tag 0.0.3</span><br><span class="line">git push --tags</span><br><span class="line">pod spec lint</span><br><span class="line">pod trunk push LTTestLib.podspec</span><br><span class="line">pod search LTTestLib</span><br></pre></td></tr></table></figure></p>
+<p>之后在测试工程中更新你的库<code>pod update LTTestLib</code><br><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fv96yvzcbij30qb0eiaui.jpg" alt=""></p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>最后祝大家都能开发出自己满意的库。<br>如果有不明白的地方可以留言。</p>
 
       
     </div>
@@ -411,8 +429,6 @@
           
             <a href="/tags/iOS/" rel="tag"># iOS</a>
           
-            <a href="/tags/Xcode/" rel="tag"># Xcode</a>
-          
         </div>
       
 
@@ -424,15 +440,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/09/06/iOS-开发去除-CocoaPods-警告-Fix-Xcode-Warning/" rel="next" title="iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)">
+                <i class="fa fa-chevron-left"></i> iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/13/制作、更新自己的CocoaPods公有库/" rel="prev" title="制作、更新自己的CocoaPods公有库">
-                制作、更新自己的CocoaPods公有库 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -601,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭CocoaPods中的警告"><span class="nav-number">2.</span> <span class="nav-text">关闭CocoaPods中的警告</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭文档警告"><span class="nav-number">2.1.</span> <span class="nav-text">关闭文档警告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭单个库警告"><span class="nav-number">2.2.</span> <span class="nav-text">关闭单个库警告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭单个文件警告"><span class="nav-number">2.3.</span> <span class="nav-text">关闭单个文件警告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭整个工程的相关警告"><span class="nav-number">2.4.</span> <span class="nav-text">关闭整个工程的相关警告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭局部警告方法"><span class="nav-number">2.5.</span> <span class="nav-text">关闭局部警告方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的警告名称"><span class="nav-number">2.6.</span> <span class="nav-text">常用的警告名称</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CocoaPods原理图"><span class="nav-number">2.</span> <span class="nav-text">CocoaPods原理图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CocoaPods-制作教程"><span class="nav-number">3.</span> <span class="nav-text">CocoaPods 制作教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-开发源码并上传到-Github-等代码托管平台"><span class="nav-number">3.1.</span> <span class="nav-text">1. 开发源码并上传到 Github 等代码托管平台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-创建-spec文件并补全信息"><span class="nav-number">3.2.</span> <span class="nav-text">2 创建.spec文件并补全信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-上传-spec文件到远程索引库"><span class="nav-number">3.3.</span> <span class="nav-text">3.上传.spec文件到远程索引库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-更新版本"><span class="nav-number">3.4.</span> <span class="nav-text">4.更新版本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
             
 
           </div>
