@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="CocoaPods,iOS," />
+  <meta name="keywords" content="iOS 12,iPhoneXs,iPhoneXr,iPhoneXs Max," />
 
 
 
@@ -86,30 +86,18 @@
 
 
 
-<meta name="description" content="前言CocoaPods 是为iOS/Mac开发而生的依赖管理工具。开发 iOS 项目不可避免的要使用各种第三方开源库，而 CocoaPods 可以让我们很方便的管理第三方库，极大的提高我们的工作效率。我们从事 iOS 开发一段时间后，肯定会整理一些自己常用的分类、封装一些 UI 组件、工具等等。这篇文章会带你从零开始创建属于你自己的 CocoaPods 库。当然库本身的代码内容需要你自己去创造。关">
-<meta name="keywords" content="CocoaPods,iOS">
+<meta name="description" content="本文记录适配 iOS 12 ，iPhoneXs Max， iPhoneXr 中遇到的一些问题(坑)WKWebView 修改 user-agent12345[self.webView evaluateJavaScript:@&amp;quot;navigator.userAgent&amp;quot; completionHandler:^(id result, NSError *error) &amp;#123;if (">
+<meta name="keywords" content="iOS 12,iPhoneXs,iPhoneXr,iPhoneXs Max">
 <meta property="og:type" content="article">
-<meta property="og:title" content="制作、更新自己的CocoaPods公有库">
-<meta property="og:url" content="http://yoursite.com/2018/09/13/制作、更新自己的CocoaPods公有库/index.html">
+<meta property="og:title" content="适配 iOS 12 和新的 iPhone">
+<meta property="og:url" content="http://yoursite.com/2018/09/25/适配-iOS-12-和新的-iPhone/index.html">
 <meta property="og:site_name" content="redmaple">
-<meta property="og:description" content="前言CocoaPods 是为iOS/Mac开发而生的依赖管理工具。开发 iOS 项目不可避免的要使用各种第三方开源库，而 CocoaPods 可以让我们很方便的管理第三方库，极大的提高我们的工作效率。我们从事 iOS 开发一段时间后，肯定会整理一些自己常用的分类、封装一些 UI 组件、工具等等。这篇文章会带你从零开始创建属于你自己的 CocoaPods 库。当然库本身的代码内容需要你自己去创造。关">
+<meta property="og:description" content="本文记录适配 iOS 12 ，iPhoneXs Max， iPhoneXr 中遇到的一些问题(坑)WKWebView 修改 user-agent12345[self.webView evaluateJavaScript:@&amp;quot;navigator.userAgent&amp;quot; completionHandler:^(id result, NSError *error) &amp;#123;if (">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwgy1fv8wb7ia9zj30sg0lcafv.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwgy1fv913yms8zj30ov0hx40t.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwgy1fv91cgwh9hj30zc09odx6.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwgy1fv92z2mu3rj30iy04r74q.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv97331gh2j30ry0osq91.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv942dtijhj31910h0qv5.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95b6m9scj30c2021dgv.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95ne6869j30v409ck57.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95wbws43j30fc061q72.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwgy1fv964wptu9j30no0kw4id.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwgy1fv96yvzcbij30qb0eiaui.jpg">
-<meta property="og:updated_time" content="2018-09-14T10:10:33.452Z">
+<meta property="og:updated_time" content="2018-09-25T09:33:59.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="制作、更新自己的CocoaPods公有库">
-<meta name="twitter:description" content="前言CocoaPods 是为iOS/Mac开发而生的依赖管理工具。开发 iOS 项目不可避免的要使用各种第三方开源库，而 CocoaPods 可以让我们很方便的管理第三方库，极大的提高我们的工作效率。我们从事 iOS 开发一段时间后，肯定会整理一些自己常用的分类、封装一些 UI 组件、工具等等。这篇文章会带你从零开始创建属于你自己的 CocoaPods 库。当然库本身的代码内容需要你自己去创造。关">
-<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tNbRwgy1fv8wb7ia9zj30sg0lcafv.jpg">
+<meta name="twitter:title" content="适配 iOS 12 和新的 iPhone">
+<meta name="twitter:description" content="本文记录适配 iOS 12 ，iPhoneXs Max， iPhoneXr 中遇到的一些问题(坑)WKWebView 修改 user-agent12345[self.webView evaluateJavaScript:@&amp;quot;navigator.userAgent&amp;quot; completionHandler:^(id result, NSError *error) &amp;#123;if (">
 
 
 
@@ -139,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/13/制作、更新自己的CocoaPods公有库/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/25/适配-iOS-12-和新的-iPhone/"/>
 
 
 
 
 
-  <title>制作、更新自己的CocoaPods公有库 | redmaple</title>
+  <title>适配 iOS 12 和新的 iPhone | redmaple</title>
   
 
 
@@ -283,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/制作、更新自己的CocoaPods公有库/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/25/适配-iOS-12-和新的-iPhone/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="勤奋的笨老头">
@@ -300,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">制作、更新自己的CocoaPods公有库</h1>
+          <h1 class="post-title" itemprop="name headline">适配 iOS 12 和新的 iPhone</h1>
         
 
         <div class="post-meta">
@@ -312,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T20:06:17+08:00">
-                2018-09-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-25T17:05:33+08:00">
+                2018-09-25
               </time>
             
 
@@ -372,42 +360,12 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><a href="https://cocoapods.org/" target="_blank" rel="noopener">CocoaPods</a> 是为iOS/Mac开发而生的依赖管理工具。<br>开发 iOS 项目不可避免的要使用各种第三方开源库，而 CocoaPods 可以让我们很方便的管理第三方库，极大的提高我们的工作效率。<br>我们从事 iOS 开发一段时间后，肯定会整理一些自己常用的分类、封装一些 UI 组件、工具等等。这篇文章会带你从零开始创建属于你自己的 CocoaPods 库。当然库本身的代码内容需要你自己去创造。<br>关于 CocoaPods 具体的安装使用这里不再多说。</p>
-<h3 id="CocoaPods原理图"><a href="#CocoaPods原理图" class="headerlink" title="CocoaPods原理图"></a>CocoaPods原理图</h3><p>我下面画了一张简单的图方便理解 CocoaPods 工作原理。<br><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fv8wb7ia9zj30sg0lcafv.jpg" alt=""></p>
-<p>如果理解了图上 CocoaPods 的流程，那么 CocoaPods 的制作流程就很明显了。  </p>
-<a id="more"></a>
-<ol>
-<li>开发源码并上传到 Github 等代码托管平台</li>
-<li>创建.spec文件并补全信息</li>
-<li>上传.spec文件到远程索引库  </li>
-</ol>
-<h3 id="CocoaPods-制作教程"><a href="#CocoaPods-制作教程" class="headerlink" title="CocoaPods 制作教程"></a>CocoaPods 制作教程</h3><p>下面我以托管到 Github 为例，制作一个测试的 CocoaPods 库  </p>
-<h4 id="1-开发源码并上传到-Github-等代码托管平台"><a href="#1-开发源码并上传到-Github-等代码托管平台" class="headerlink" title="1. 开发源码并上传到 Github 等代码托管平台"></a>1. 开发源码并上传到 Github 等代码托管平台</h4><p>1.1  在 Github 上创建一个新的仓库， README可选也可以不选，也可以以后再创建，<code>.gitgore</code> 选择对应语言<code>，Objective-C</code> 或者 <code>Swift</code> ，<code>License</code>随意算择。<br><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fv913yms8zj30ov0hx40t.jpg" alt=""></p>
-<p>1.2  Clone项目到本地工作区<br><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fv91cgwh9hj30zc09odx6.jpg" alt=""></p>
-<p>把你的代码加进去<br><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fv92z2mu3rj30iy04r74q.jpg" alt=""><br>这里 Classes 可以改成你的框架名字</p>
-<p>1.3  提交代码到 Github 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add.</span><br><span class="line">git commit -m &quot;init commit&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-创建-spec文件并补全信息"><a href="#2-创建-spec文件并补全信息" class="headerlink" title="2 创建.spec文件并补全信息"></a>2 创建.spec文件并补全信息</h4><p>2.1  创建.spec 文件  <code>pod spec create LTTestLib</code>  </p>
-<p>2.2  编辑.spec 文件<br><a href="https://github.com/hongfenglt/LTTestLib/blob/master/LTTestLib.podspec" target="_blank" rel="noopener">这个测试项目的spec</a><br>里面注释写的很清楚了<br><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv97331gh2j30ry0osq91.jpg" alt=""></p>
-<p>2.3 打Tag标签<br>这个标签要跟.spec中的一致，因为最后 CocoaPods 会根据 .spec 文件中的 tag 去下载源码<br>例如 <code>pod &#39;AFNetworking&#39;, &#39;~&gt; 3.0&#39;</code><br>如果不指定版本默认会安装最新版</p>
-<p>git tag 0.0.1<br>git push –tags </p>
-<p>远程仓库 <a href="https://github.com/hongfenglt/LTTestLib/releases" target="_blank" rel="noopener">Releases</a> 中就有了刚刚 push 上去的 tag ，如果打错 tag ，下面是删除 tag 的方法</p>
-<p>git tag -d 0.0.1 // 删除本地 tag<br>git push origin :0.0.1 // 删除远程 tag</p>
-<h4 id="3-上传-spec文件到远程索引库"><a href="#3-上传-spec文件到远程索引库" class="headerlink" title="3.上传.spec文件到远程索引库"></a>3.上传.spec文件到远程索引库</h4><p>3.1 注册 Trunk<br><code>pod trunk register hongfengkt@gmail.com --verbose</code><br>注意上面邮箱换成你的真实邮箱，成功后你会收到一封邮件，需要点击验证<br>查看trunk  <code>pod trunk me</code><br>添加其他维护者(如果框架由多人维护)<br><code>pod trunk add-owner ARAnalytics kyle@cocoapods.org</code><br>更多详细内容查看官网：<a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html" target="_blank" rel="noopener">https://guides.cocoapods.org/making/getting-setup-with-trunk.html</a>  </p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv942dtijhj31910h0qv5.jpg" alt=""><br>以上只需操作一次</p>
-<p>3.2 验证.spec文件<br>本地验证.spec： <code>pod spec lint</code><br>如果没有问题会显示 <code>LTTestLib.podspec passed validation.</code><br><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95b6m9scj30c2021dgv.jpg" alt=""><br>如果有问题使用 <code>pod spec lint --verbose</code> 可以查看详细信息</p>
-<p>通过以后提交到远程仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add.  </span><br><span class="line">git commit -m &quot;update spec&quot;  </span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
-<p>3.3 上传 sepc 到官方索引库<br>使用命令  <code>pod trunk push LTTestLib.podspec</code> </p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95ne6869j30v409ck57.jpg" alt=""></p>
-<p>这条命令做了三件事：<br>验证远程 podspec 文件<br>上传 podspec 文件到 trunk 服务<br>将{project}.podspec文件转为{poject}.podspec.json文件</p>
-<p><strong>如果你的库依赖了其他库你可能需要加上</strong> <code>--use-libraries</code><br><strong>如果你依赖的其他库有许多警告，可能会验证不通过，你需要加上</strong> <code>--allow-warnings</code><br><strong>所以最后命令可能是</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pod spec lint LTTestLib.podspec --use-libraries --allow-warnings</span><br><span class="line">pod trunk push LTTestLib.podspec --use-libraries --allow-warnings</span><br></pre></td></tr></table></figure></p>
-<p>3.4 <code>pod search LTTestLib</code> 确认你的库可以被搜索到</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv95wbws43j30fc061q72.jpg" alt="">  </p>
-<p>如果这里搜索不到，是因为你本地是索引文件没有更新，参考最上面那张图。<br>删除 search_index.josn 在搜索就可以了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm ~/Library/Caches/CocoaPods/search_index.json</span><br><span class="line">pod search LTTestLib</span><br></pre></td></tr></table></figure></p>
-<p>大功告成，这里能搜到就说明其他人也可以使用 pod 来安装你的库了。</p>
-<p>你可以新建一个项目来测试一下，我们在 spec 文件中设置依赖 Reachability ，所以 Reachability 也会被安装<br><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fv964wptu9j30no0kw4id.jpg" alt=""></p>
-<h4 id="4-更新版本"><a href="#4-更新版本" class="headerlink" title="4.更新版本"></a>4.更新版本</h4><p>更新你的框架，打新 tag<br>编辑 podspec 文件，更新 tag<br>重复3.2~3.4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;0.0.3&quot;</span><br><span class="line">git push</span><br><span class="line">git tag 0.0.3</span><br><span class="line">git push --tags</span><br><span class="line">pod spec lint</span><br><span class="line">pod trunk push LTTestLib.podspec</span><br><span class="line">pod search LTTestLib</span><br></pre></td></tr></table></figure></p>
-<p>之后在测试工程中更新你的库<code>pod update LTTestLib</code><br><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fv96yvzcbij30qb0eiaui.jpg" alt=""></p>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>最后祝大家都能开发出自己满意的库。<br>如果有不明白的地方可以留言。</p>
+        <h3 id="本文记录适配-iOS-12-，iPhoneXs-Max，-iPhoneXr-中遇到的一些问题-坑"><a href="#本文记录适配-iOS-12-，iPhoneXs-Max，-iPhoneXr-中遇到的一些问题-坑" class="headerlink" title="本文记录适配 iOS 12 ，iPhoneXs Max， iPhoneXr 中遇到的一些问题(坑)"></a>本文记录适配 iOS 12 ，iPhoneXs Max， iPhoneXr 中遇到的一些问题(坑)</h3><h4 id="WKWebView-修改-user-agent"><a href="#WKWebView-修改-user-agent" class="headerlink" title="WKWebView 修改 user-agent"></a>WKWebView 修改 user-agent</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[self.webView evaluateJavaScript:@&quot;navigator.userAgent&quot; completionHandler:^(id result, NSError *error) &#123;</span><br><span class="line">if (error) return;</span><br><span class="line">NSString *string = result;</span><br><span class="line">[self.webView setCustomUserAgent:[string stringByAppendingString:@&quot;Client: iOS&quot;]];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>这种方式设置 user-agent 在 iOS 12 上不生效<br><a id="more"></a><br>在 <code>AppDelegate</code>中修改全局<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (@available(iOS 12.0, *)) &#123;</span><br><span class="line">NSDictionary *userAgentDic = @&#123;@&quot;UserAgent&quot; : @&quot;Your UserAgent&quot;&#125;;</span><br><span class="line">[NSUserDefaults.standardUserDefaults registerDefaults:userAgentDic];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="xcode-10-移除了-libstdc-6-0-9"><a href="#xcode-10-移除了-libstdc-6-0-9" class="headerlink" title="xcode 10 移除了 -libstdc++6.0.9"></a>xcode 10 移除了 -libstdc++6.0.9</h4><p>临时解决~正确姿势是替换或者找依赖这个库的服务方换库升级巴拉巴拉）<br>解决方案：拷贝xcode 9 下的 libstdc++6.0.9 到xcode 10的目录下 （Xcode显示包内容 Contents/Developer/Platforms/iPhoneOS.platform（模拟器下运行：iPhoneSimulator.platform）/Developer/SDKs/iPhoneOS.sdk/usr/lib/）  </p>
+<h4 id="cocoapods-在-macOS升级情况下失效-提示pod-Undefined-error-0-或者-command-not-found"><a href="#cocoapods-在-macOS升级情况下失效-提示pod-Undefined-error-0-或者-command-not-found" class="headerlink" title="cocoapods 在 macOS升级情况下失效(提示pod: Undefined error: 0 或者 command not found)"></a>cocoapods 在 macOS升级情况下失效(提示pod: Undefined error: 0 或者 command not found)</h4><p>解决方案：1.打开终端 先升级 gem update –system 2.升级cocoapods （brew 安装的 ：brew upgrade cocoapods）3.执行 sudo gem install -n /usr/local/bin cocoapods </p>
+<h4 id="适配-iPhoneXs-Max，-iPhoneXr-屏幕"><a href="#适配-iPhoneXs-Max，-iPhoneXr-屏幕" class="headerlink" title="适配 iPhoneXs Max， iPhoneXr 屏幕"></a>适配 iPhoneXs Max， iPhoneXr 屏幕</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">static inline BOOL isIPhoneXSeries() &#123;</span><br><span class="line">BOOL iPhoneXSeries = NO;</span><br><span class="line">if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) &#123;</span><br><span class="line">return iPhoneXSeries;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if (@available(iOS 11.0, *)) &#123;</span><br><span class="line">UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];</span><br><span class="line">if (mainWindow.safeAreaInsets.bottom &gt; 0.0) &#123;</span><br><span class="line">iPhoneXSeries = YES;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">return iPhoneXSeries;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">+ (BOOL)isIphoneX &#123;</span><br><span class="line">return isIPhoneXSeries();</span><br><span class="line">&#125;</span><br><span class="line">+ (CGFloat)navBarBottom &#123;</span><br><span class="line">return [[UIApplication sharedApplication] statusBarFrame].size.height + 44;</span><br><span class="line">&#125;</span><br><span class="line">+ (CGFloat)tabBarHeight &#123;</span><br><span class="line">return [self safebottom] + 49;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (CGFloat)statusBarHeigth &#123;</span><br><span class="line">return [[UIApplication sharedApplication] statusBarFrame].size.height;</span><br><span class="line">&#125;</span><br><span class="line">+ (CGFloat)safebottom &#123;</span><br><span class="line">if (@available(iOS 11.0, *)) &#123;</span><br><span class="line">return [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -425,9 +383,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CocoaPods/" rel="tag"># CocoaPods</a>
+            <a href="/tags/iOS-12/" rel="tag"># iOS 12</a>
           
-            <a href="/tags/iOS/" rel="tag"># iOS</a>
+            <a href="/tags/iPhoneXs/" rel="tag"># iPhoneXs</a>
+          
+            <a href="/tags/iPhoneXr/" rel="tag"># iPhoneXr</a>
+          
+            <a href="/tags/iPhoneXs-Max/" rel="tag"># iPhoneXs Max</a>
           
         </div>
       
@@ -440,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/06/iOS-开发去除-CocoaPods-警告-Fix-Xcode-Warning/" rel="next" title="iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)">
-                <i class="fa fa-chevron-left"></i> iOS 开发去除 CocoaPods 警告(Fix Xcode Warning)
+              <a href="/2018/09/13/制作、更新自己的CocoaPods公有库/" rel="next" title="制作、更新自己的CocoaPods公有库">
+                <i class="fa fa-chevron-left"></i> 制作、更新自己的CocoaPods公有库
               </a>
             
           </div>
@@ -449,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/25/适配-iOS-12-和新的-iPhone/" rel="prev" title="适配 iOS 12 和新的 iPhone">
-                适配 iOS 12 和新的 iPhone <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -621,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CocoaPods原理图"><span class="nav-number">2.</span> <span class="nav-text">CocoaPods原理图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CocoaPods-制作教程"><span class="nav-number">3.</span> <span class="nav-text">CocoaPods 制作教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-开发源码并上传到-Github-等代码托管平台"><span class="nav-number">3.1.</span> <span class="nav-text">1. 开发源码并上传到 Github 等代码托管平台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-创建-spec文件并补全信息"><span class="nav-number">3.2.</span> <span class="nav-text">2 创建.spec文件并补全信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-上传-spec文件到远程索引库"><span class="nav-number">3.3.</span> <span class="nav-text">3.上传.spec文件到远程索引库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-更新版本"><span class="nav-number">3.4.</span> <span class="nav-text">4.更新版本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文记录适配-iOS-12-，iPhoneXs-Max，-iPhoneXr-中遇到的一些问题-坑"><span class="nav-number">1.</span> <span class="nav-text">本文记录适配 iOS 12 ，iPhoneXs Max， iPhoneXr 中遇到的一些问题(坑)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#WKWebView-修改-user-agent"><span class="nav-number">1.1.</span> <span class="nav-text">WKWebView 修改 user-agent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#xcode-10-移除了-libstdc-6-0-9"><span class="nav-number">1.2.</span> <span class="nav-text">xcode 10 移除了 -libstdc++6.0.9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cocoapods-在-macOS升级情况下失效-提示pod-Undefined-error-0-或者-command-not-found"><span class="nav-number">1.3.</span> <span class="nav-text">cocoapods 在 macOS升级情况下失效(提示pod: Undefined error: 0 或者 command not found)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#适配-iPhoneXs-Max，-iPhoneXr-屏幕"><span class="nav-number">1.4.</span> <span class="nav-text">适配 iPhoneXs Max， iPhoneXr 屏幕</span></a></li></ol></li></ol></div>
             
 
           </div>
